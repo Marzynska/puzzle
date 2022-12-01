@@ -1,0 +1,46 @@
+.mainField {
+  height: 100%;
+  width: 70%;
+  background: $gameFieldColor;
+  border: 3px $darkAccent solid;
+  border-right: none;
+  border-radius: 20px 0 0 20px;
+  padding: 15px;
+
+  p, h3 {
+    color: $darkAccent;
+  }
+
+  form {
+    color: $fontColorDark;
+    font-size: 1rem;
+    text-align: center;
+
+    input {
+      border: 2px solid $darkAccent;
+      border-radius: 15px 0 15px 0;
+      padding: 2px 4px;
+      margin: 4px;
+      color: $fontColorDark;
+      &::placeholder {
+        color: $darkAccent;
+        font-weight: 300;
+      }
+
+    }
+    .radio {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: $primaryColor;
+      border: 2px solid white;
+      box-shadow: 0 0 0 2px $darkAccent;
+    }
+    .p-button-raised {
+      padding: 11px 100px;
+      margin: 20px;
+    }
+  }
+}

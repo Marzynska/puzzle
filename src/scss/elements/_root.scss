@@ -1,0 +1,31 @@
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: $mainFont;
+}
+
+body {
+  background-image: url("../src/assets/img/background1.jpg");
+  background-size: cover;
+  //background-repeat: no-repeat;
+  background-color: $gameFieldColor;
+  //opacity: 40%;
+  height: 100vh;
+  @include flexCenter;
+}
+
+h2 {
+  font-size: 2rem;
+  padding: 0 0 5px 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  padding: 0 0 5px 0;
+}
+
+p {
+  font-size: 16px;
+  font-family: $mainFont;
+}
