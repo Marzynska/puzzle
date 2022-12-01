@@ -1,8 +1,13 @@
 import React from 'react';
+import TypeOfScore from "../components/TypeOfScore.jsx";
+import Score from "../components/Score.jsx";
 
-function BestScore(props) {
+function BestScore() {
     return (
-        <div>BEST SCORE ...... will appear here</div>
+        <div className="container">
+            <Score />
+            <TypeOfScore />
+        </div>
     );
 }
 

@@ -1,46 +1,66 @@
 .mainField {
-  height: 100%;
-  width: 70%;
-  background: $gameFieldColor;
-  border: 3px $darkAccent solid;
-  border-right: none;
-  border-radius: 20px 0 0 20px;
-  padding: 15px;
+  @include mainFieldSettings;
+  @include flexCenter;
 
   p, h3 {
-    color: $darkAccent;
+    //color: $darkAccent;
+    color: $fontColorDark;
   }
 
   form {
     color: $fontColorDark;
+    font-family: $mainFont;
     font-size: 1rem;
     text-align: center;
 
-    input {
+    label, fieldset {
+      margin: 5px 0;
+    }
+
+    .textInput {
       border: 2px solid $darkAccent;
       border-radius: 15px 0 15px 0;
-      padding: 2px 4px;
+      padding: 2px 5px;
       margin: 4px;
       color: $fontColorDark;
       &::placeholder {
         color: $darkAccent;
         font-weight: 300;
       }
-
     }
+    .radioDescription {
+      text-align: center;
+      margin: 4px;
+    }
+    .radioForm {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 4px;
+    }
+
     .radio {
       appearance: none;
       -webkit-appearance: none;
       width: 12px;
       height: 12px;
+      padding: 3px;
+      margin: 0 10px;
       border-radius: 50%;
-      background: $primaryColor;
+      background: $fontColor;
       border: 2px solid white;
       box-shadow: 0 0 0 2px $darkAccent;
+      &:checked {
+        background: $primaryColor;
+      }
     }
+
     .p-button-raised {
       padding: 11px 100px;
       margin: 20px;
     }
+  }
+  .imgSmall {
+    width: 55%;
   }
 }
