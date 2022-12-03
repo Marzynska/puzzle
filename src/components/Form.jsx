@@ -1,30 +1,23 @@
 import React, {useEffect, useState} from 'react';
 import { Button } from 'primereact/button';
 
-function Form() {
-    const [name, setName] = useState(" ");
-    const [pieces, setPieces] = useState();
-    const [img, setImg] = useState();
-    const [url, setUrl] = useState(" ");
-
+function Form({getName, getNumberOfPieces, getImg, image, getUrl, url}) {
+    let name;
     const inputName = (e) => {
-        setName(e.target.value);
-        console.log(name);
+        name = e.target.value;
+        getName(e.target.value);
     }
 
     const numberOfPieces = (e) => {
-        setPieces(e.target.value);
-        console.log(pieces);
+        getNumberOfPieces(e.target.value);
     }
 
     const chooseImg = (e) => {
-        setImg(e.target.value);
-        console.log(img);
+        getImg(e.target.value);
     }
 
     const inputUrl = (e) => {
-        setUrl(e.target.value);
-        console.log(url);
+        getUrl(e.target.value);
     }
 
     const handleSubmit = (e) => {
@@ -41,7 +34,8 @@ function Form() {
                            name="name"
                            placeholder="name"
                            value={name}
-                           onChange={e => inputName(e)}/>
+                           onChange={e => inputName(e)}
+                    />
                 </label>
                 <br/>
                 <p className="radioDescription">Select number of pieces:</p>
@@ -59,7 +53,7 @@ function Form() {
                     <label><input className="radio" type="radio" name="image" value="otherImg"/>other picture</label>
                 </fieldset>
                 <br/>
-                { img === "otherImg" && <label> Do you want to try another one? Choose the path of your own image and enjoy the game :)
+                { image === "otherImg" && <label> Do you want to try another one? Choose the path of your own image and enjoy the game :)
                     <br/>
                     <input className="textInput"
                            type="url"
