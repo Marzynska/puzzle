@@ -2,5 +2,5 @@
   @include flexCenter;
   border-radius: 20px;
   height: 80%;
-  //czy dałoby się zrobić 100% rodzica - wysokość headera? Najlepiej, żeby jeszcze padding na dole był taki sam, jak z boku :D
+  overflow: auto;
 }

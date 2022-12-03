@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Instruction(props) {
+function HowToPlay() {
     return (
         <div className="textArea">
             <h2>How to play</h2>
@@ -9,4 +9,4 @@ function Instruction(props) {
     );
 }
 
-export default Instruction;
+export default HowToPlay;

@@ -1,8 +1,9 @@
 import React from 'react';
 
 function GameField(props) {
+
     return (
-        <div>GameField</div>
+        <div  className="mainField">GameField</div>
     );
 }
 

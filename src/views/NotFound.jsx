@@ -1,9 +1,10 @@
 import React from 'react';
 
-function NotFound(props) {
+function NotFound() {
     return (
         <>
-            <p>Ooops!</p>
+            <br/>
+            <h3>Ooops!</h3>
             <h1>404, nothing is here</h1>
         </>
     );

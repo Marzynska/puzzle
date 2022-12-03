@@ -1,11 +1,13 @@
 import React from 'react';
-import MainField from "../components/MainField.jsx";
+import Form from "../components/Form.jsx";
 import SideBar from "../components/SideBar.jsx";
 
 function MainView() {
+
+
     return (
         <div className="container">
-            <MainField />
+            <Form />
             <SideBar />
         </div>
     );
