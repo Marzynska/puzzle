@@ -1,27 +1,41 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import { Button } from 'primereact/button';
+import { Toast } from 'primereact/toast';
+import { useRef } from 'react';
 
-function Form({getName, getNumberOfPieces, getImg, image, getUrl, url}) {
-    let name;
+function Form({getName, name, getNumberOfPieces, getImg, image, getUrl, url, updateSubmit}) {
+    // const errorToast = useRef(null);
+    // const errorToast = useRef(null);
+
     const inputName = (e) => {
-        name = e.target.value;
-        getName(e.target.value);
+        if (typeof getName === "function") {
+            getName(e.target.value);
+        }
     }
 
     const numberOfPieces = (e) => {
-        getNumberOfPieces(e.target.value);
+        if (typeof  getNumberOfPieces === "function") {
+            getNumberOfPieces(e.target.value);
+        }
     }
 
     const chooseImg = (e) => {
-        getImg(e.target.value);
+        if (typeof getImg === "function") {
+            getImg(e.target.value);
+        }
     }
 
     const inputUrl = (e) => {
-        getUrl(e.target.value);
+        if (typeof getUrl === "function") {
+            getUrl(e.target.value);
+        }
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (typeof updateSubmit === "function") {
+            updateSubmit();
+        }
     }
 
     return (

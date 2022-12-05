@@ -1,0 +1,19 @@
+@use "sass:color";
+
+.board {
+  @include flexCenter;
+  flex-direction: column;
+  border: 1px solid $darkAccent;
+
+  .row {
+    @include flexCenter;
+    flex-direction: row;
+  }
+
+  .puzzle {
+    width: 300px;
+    height: 200px;
+    border: 1px solid $primaryColor;
+    background: color.scale($gameFieldColor, $lightness: 40%);
+  }
+}
