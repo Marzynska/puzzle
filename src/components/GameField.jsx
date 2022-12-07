@@ -1,8 +1,8 @@
 import React from 'react';
 
-function GameField({pieces, img}) {
+function GameField({pieces, img, timer}) {
+
     let row = Math.sqrt(pieces);
-    console.log(row);
 
     return (
         <div  className="mainField">

@@ -1,35 +1,42 @@
 import React, {useState} from 'react';
+import {puzzle4} from "./PuzzleSettings.jsx";
 
-function SideBar({name, numberOfPieces, image, url}) {
-    // const [parts, setParts] = useState(["part1", "part2", "part3", "part4"]);
-    //
+function SideBar({name, numberOfPieces, img, url, timer}) {
+    const [parts, setParts] = useState(puzzle4);
+
+    let background;
+    if (img === "img1") {
+        background = "url('../src/assets/img/img1s.jpg')";
+    } else if (img === "img2") {
+        background = "url('../src/assets/img/img2s.jpg')";
+    } else if (img === "img3") {
+        background = "url('../src/assets/img/img3s.jpg')";
+    } else {
+        background = `url("${url}")`;
+    }
+
     const handleClick = (e) => {
-        e.currentTarget.classList.toggle("marked");
+        e.currentTarget.style.border = `3px solid blue;
     }
 
     return (
         <div className="sidebar">
-            {name != " " && <h2>Hello {name}!</h2>}
-            {/*{numberOfPieces != " " && <p>Number of pieces: {numberOfPieces}</p>}*/}
-            {/*{image != " " && <p>Image: {image}</p>}*/}
-            {/*{url != " " && <p>Picture's URL: {url}</p>}*/}
+            {name !== " " && <h2>Hello {name}!</h2>}
             <div className="gameInfo">
-                <p>Your time:</p>
-                <p>counter</p>
+                <p>Your time: {timer} seconds</p>
                 <br/>
                 <p>You clicked .... times</p>
             </div>
-            {/*<ul className="pieces">*/}
-            {/*    {parts.map((element, index) =>*/}
-            {/*        <li key={index} onClick={(e) => handleClick(e)} >{index}</li>*/}
-            {/*        // <li key={index}, className=`part ${element}`, onClick={(e) => handleClick(e)} ></li>*/}
-            {/*    )}*/}
-            {/*</ul>*/}
             <div className="pieces">
-                <div id="part1" className="part part1 marked" onClick={(e) => handleClick(e)}></div>
-                <div id="part2" className="part part2 used" onClick={(e) => handleClick(e)}></div>
-                <div id="part3" className="part part3" onClick={(e) => handleClick(e)}></div>
-                <div id="part4" className="part part4" onClick={(e) => handleClick(e)}></div>
+                {parts.map(({backgroundRepeat, backgroundSize, backgroundPosition, className, text}, idx) =>
+                    <div key={idx}
+                         style={{backgroundImage: background,
+                                backgroundRepeat,
+                                backgroundSize,
+                                backgroundPosition}}
+                         onClick={e => handleClick(e)}
+                         className={className}>{text}</div>
+                )}
             </div>
 
         </div>

@@ -1,11 +1,8 @@
 import React from 'react';
 import { Button } from 'primereact/button';
-import { Toast } from 'primereact/toast';
-import { useRef } from 'react';
 
-function Form({getName, name, getNumberOfPieces, getImg, image, getUrl, url, updateSubmit}) {
-    // const errorToast = useRef(null);
-    // const errorToast = useRef(null);
+function Form({getName, getNumberOfPieces, getImg, image, getUrl, url, updateSubmit}) {
+
 
     const inputName = (e) => {
         if (typeof getName === "function") {
@@ -43,11 +40,11 @@ function Form({getName, name, getNumberOfPieces, getImg, image, getUrl, url, upd
             <form>
                 <label> Enter your name:
                     <br/>
+
                     <input className="textInput"
                            type="text"
                            name="name"
                            placeholder="name"
-                           value={name}
                            onChange={e => inputName(e)}
                     />
                 </label>

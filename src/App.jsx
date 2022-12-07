@@ -3,11 +3,11 @@ import {createRoot} from "react-dom/client";
 import {Route, Routes, Link, NavLink, Outlet, BrowserRouter} from "react-router-dom";
 import Header from "./components/Header.jsx";
 import MainView from "./views/MainView.jsx";
-import Game from "./views/Game.jsx";
 import NotFound from "./views/NotFound.jsx";
 import BestScore from "./views/BestScore.jsx";
 import HireMe from "./views/HireMe.jsx";
 import HowToPlay from "./views/HowToPlay.jsx";
+import Game from "./views/Game.jsx";
 
 function App() {
 

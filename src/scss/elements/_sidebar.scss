@@ -17,34 +17,30 @@
       margin: 7px;
     }
 
-    .part1 {
-      background-image: url("../src/assets/img/img1s.jpg");
-      background-repeat: no-repeat;
-      background-size: 200px 134px;
-      background-position: 0 0;
-    }
-    .part2 {
-      background-image: url("../src/assets/img/img1s.jpg");
-      background-repeat: no-repeat;
-      background-size: 200px 134px;
-      background-position: 100% 0;
-    }
-    .part3 {
-      background-image: url("../src/assets/img/img1s.jpg");
-      background-repeat: no-repeat;
-      background-size: 200px 134px;
-      background-position: 0 100%;
-    }
-    .part4 {
-      background-image: url("../src/assets/img/img1s.jpg");
-      background-repeat: no-repeat;
-      background-size: 200px 134px;
-      background-position: 100% 100%;
-    }
+    //.part1 {
+    //  background-repeat: no-repeat;
+    //  background-size: 200px 134px;
+    //  background-position: 0 0;
+    //}
+    //.part2 {
+    //  background-repeat: no-repeat;
+    //  background-size: 200px 134px;
+    //  background-position: 100% 0;
+    //}
+    //.part3 {
+    //  background-repeat: no-repeat;
+    //  background-size: 200px 134px;
+    //  background-position: 0 100%;
+    //}
+    //.part4 {
+    //  background-repeat: no-repeat;
+    //  background-size: 200px 134px;
+    //  background-position: 100% 100%;
+    //}
 
-    .marked {
-      border: 3px solid $fontColorDark;
-    }
+    //.marked {
+    //  border: 3px solid $fontColorDark;
+    //}
 
     .used {
       border: 1px solid $gameFieldColor;
