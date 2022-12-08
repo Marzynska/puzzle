@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Form from "../components/Form.jsx";
-import SideBar from "../components/SideBar.jsx";
+import SideBar from "../components/sidebar/SideBar.jsx";
 import GameField from "../components/GameField.jsx";
 import { Toast } from 'primereact/toast';
 import { useRef } from 'react';

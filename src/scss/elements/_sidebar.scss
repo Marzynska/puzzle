@@ -2,10 +2,11 @@
 
 .sidebar {
   @include sidebarSettings;
+  overflow: auto;
 
   .pieces {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     margin: 20px 0;
@@ -17,30 +18,9 @@
       margin: 7px;
     }
 
-    //.part1 {
-    //  background-repeat: no-repeat;
-    //  background-size: 200px 134px;
-    //  background-position: 0 0;
-    //}
-    //.part2 {
-    //  background-repeat: no-repeat;
-    //  background-size: 200px 134px;
-    //  background-position: 100% 0;
-    //}
-    //.part3 {
-    //  background-repeat: no-repeat;
-    //  background-size: 200px 134px;
-    //  background-position: 0 100%;
-    //}
-    //.part4 {
-    //  background-repeat: no-repeat;
-    //  background-size: 200px 134px;
-    //  background-position: 100% 100%;
-    //}
-
-    //.marked {
-    //  border: 3px solid $fontColorDark;
-    //}
+    .marked {
+      border: 3px solid $fontColorDark;
+    }
 
     .used {
       border: 1px solid $gameFieldColor;

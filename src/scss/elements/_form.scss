@@ -1,6 +1,7 @@
 .mainField {
   @include mainFieldSettings;
   @include flexCenter;
+  overflow: auto;
 
   p, h3 {
     color: $fontColorDark;
