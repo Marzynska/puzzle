@@ -58,7 +58,7 @@ function MainView() {
                             image={img} getUrl={updateStateUrl}
                             url={url}
                             updateSubmit={updateSubmit}/> : <GameField pieces={pieces} img={img}/>}
-            <SideBar name={name} numberOfPieces={pieces} img={img} url={url} timer={timer}/>
+            <SideBar name={name} numberOfPieces={pieces} img={img} url={url} timer={timer} submit={submit}/>
         </div>
     );
 }

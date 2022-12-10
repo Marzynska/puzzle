@@ -4,7 +4,8 @@ const puzzle4 = [
         text: "aaa",
         className: "part",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "200px 134px",
+        // backgroundSize: "200px 134px",
+        backgroundSize: "200%",
         backgroundPosition: "0 0"
     },
     {
@@ -12,7 +13,8 @@ const puzzle4 = [
         text: "bbb",
         className: "part",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "200px 134px",
+        // backgroundSize: "200px 134px",
+        backgroundSize: "200%",
         backgroundPosition: "100% 0"
     },
     {
@@ -20,7 +22,8 @@ const puzzle4 = [
         text: "ccc",
         className: "part",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "200px 134px",
+        // backgroundSize: "200px 134px",
+        backgroundSize: "200%",
         backgroundPosition: "0 100%"
     },
     {
@@ -28,7 +31,8 @@ const puzzle4 = [
         text: "ddd",
         className: "part",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "200px 134px",
+        // backgroundSize: "200px 134px",
+        backgroundSize: "200%",
         backgroundPosition: "100% 100%"
     }
 ];

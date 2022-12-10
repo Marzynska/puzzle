@@ -3,6 +3,7 @@ import React from 'react';
 function Option4Pieces({background, parts}) {
     const handleClick = (e) => {
         e.currentTarget.classList.toggle("marked");
+        console.log(e.currentTarget.backgroundPosition);
     }
 
     return (
