@@ -1,20 +1,16 @@
 import React from 'react';
 
-function Option4Pieces({background, parts}) {
-    const handleClick = (e) => {
-        e.currentTarget.classList.toggle("marked");
-        console.log(e.currentTarget.backgroundPosition);
-    }
+function Option4Pieces({background, parts, isClicked}) {
 
     return (
         <>
-            {parts.map(({backgroundRepeat, backgroundSize, backgroundPosition, className, text}, idx) =>
-                <div key={idx}
+            {parts.map(({id,backgroundRepeat, backgroundSize, backgroundPosition, className, text}) =>
+                <div key={id}
                      style={{backgroundImage: background,
                          backgroundRepeat,
                          backgroundSize,
                          backgroundPosition}}
-                     onClick={e => handleClick(e)}
+                     onClick={e => isClicked(e)}
                      className={className}>{text}</div>
             )}
         </>

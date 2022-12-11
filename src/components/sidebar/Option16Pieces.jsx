@@ -1,9 +1,7 @@
 import React from 'react';
 
-function Option16Pieces({background, parts16}) {
-    const handleClick = (e) => {
-        e.currentTarget.classList.toggle("marked");
-    }
+function Option16Pieces({background, parts16, isClicked}) {
+
 
     return (
         <>
@@ -13,7 +11,7 @@ function Option16Pieces({background, parts16}) {
                          backgroundRepeat,
                          backgroundSize,
                          backgroundPosition}}
-                     onClick={e => handleClick(e)}
+                     onClick={e => isClicked(e)}
                      className={className}>{text}</div>
             )}
         </>

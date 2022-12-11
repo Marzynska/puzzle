@@ -1,9 +1,6 @@
 import React from 'react';
 
-function Option9Pieces({background, parts9}) {
-    const handleClick = (e) => {
-        e.currentTarget.classList.toggle("marked");
-    }
+function Option9Pieces({background, parts9, isClicked}) {
 
     return (
         <>
@@ -13,7 +10,7 @@ function Option9Pieces({background, parts9}) {
                          backgroundRepeat,
                          backgroundSize,
                          backgroundPosition}}
-                     onClick={e => handleClick(e)}
+                     onClick={e => isClicked(e)}
                      className={className}>{text}</div>
             )}
         </>

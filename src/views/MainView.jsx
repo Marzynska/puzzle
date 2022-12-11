@@ -13,6 +13,9 @@ function MainView() {
     const [submit, setSubmit] = useState(false);
     const [timer, setTimer] = useState(0);
     const [timerIsRunning, setTimerIsRunning] = useState(false);
+    const [markedElement, setMarkedElement] = useState(" ");
+    // const [puzzle, setPuzzle] = useState([]);
+
 
     const toast = useRef();
 
@@ -34,8 +37,12 @@ function MainView() {
             setTimerIsRunning(true);
             console.log("submitted");
         } else {
-            toast.current.show({severity: 'error', life: 5000, summary: 'Error', detail: 'All fields need to be filled. Name should have at least 3 characters'});
+            toast.current.show({severity: 'error', life: 4000, summary: 'Error', detail: 'All fields need to be filled. Name should have at least 3 characters'});
         }
+    }
+
+    const updateMarkedElement = (e) => {
+        setMarkedElement(e);
     }
 
     useEffect(() => {
@@ -57,8 +64,15 @@ function MainView() {
                             getImg={updateStateImg}
                             image={img} getUrl={updateStateUrl}
                             url={url}
-                            updateSubmit={updateSubmit}/> : <GameField pieces={pieces} img={img}/>}
-            <SideBar name={name} numberOfPieces={pieces} img={img} url={url} timer={timer} submit={submit}/>
+                            updateSubmit={updateSubmit}/> : <GameField pieces={pieces} img={img} markedElement={markedElement}/>}
+            <SideBar name={name}
+                     numberOfPieces={pieces}
+                     img={img}
+                     url={url}
+                     timer={timer}
+                     submit={submit}
+                     markedElement = {markedElement}
+                     updateMarkedElement={updateMarkedElement}/>
         </div>
     );
 }
