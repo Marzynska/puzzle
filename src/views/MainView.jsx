@@ -14,7 +14,7 @@ function MainView() {
     const [timer, setTimer] = useState(0);
     const [timerIsRunning, setTimerIsRunning] = useState(false);
     const [markedElement, setMarkedElement] = useState(" ");
-    // const [puzzle, setPuzzle] = useState([]);
+    const [win, setWin] = useState(false);
 
 
     const toast = useRef();
@@ -40,7 +40,6 @@ function MainView() {
             toast.current.show({severity: 'error', life: 4000, summary: 'Error', detail: 'All fields need to be filled. Name should have at least 3 characters'});
         }
     }
-
     const updateMarkedElement = (e) => {
         setMarkedElement(e);
     }
@@ -55,6 +54,11 @@ function MainView() {
         return () => clearInterval(intervalID);
     }, [timerIsRunning]);
 
+    useEffect(() => {
+        setTimerIsRunning(false);
+        
+    }, [win]);
+
     return (
         <div className="container">
             <Toast ref={toast} />
@@ -64,7 +68,7 @@ function MainView() {
                             getImg={updateStateImg}
                             image={img} getUrl={updateStateUrl}
                             url={url}
-                            updateSubmit={updateSubmit}/> : <GameField pieces={pieces} img={img} markedElement={markedElement}/>}
+                            updateSubmit={updateSubmit}/> : <GameField pieces={pieces} img={img} markedElement={markedElement} setWin={setWin} setTimerIsRunning={setTimerIsRunning}/>}
             <SideBar name={name}
                      numberOfPieces={pieces}
                      img={img}
