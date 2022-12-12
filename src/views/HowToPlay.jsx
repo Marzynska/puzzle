@@ -4,7 +4,10 @@ function HowToPlay() {
     return (
         <div className="textArea">
             <h2>How to play</h2>
-            <p>How to play Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cumque deserunt doloribus, fugit maiores sint tempore ullam unde veritatis voluptate?</p>
+            <h3>Cel gry</h3>
+            <p>Celem gry jest ułożenie puzzli w odpowiedniej kolejności tak, by pojawił się cały obrazek.</p>
+            <h3>Jak grać?</h3>
+            <p>Kliknij w miniaturową część układanki, którą chcesz umieścić na planszy. Pojawi się szara ramka - to znaczy, że puzzel jest aktywny. Umieść go we właściwym miejscu klikając jeden raz na wybrane pole. Jeżeli chcesz dopasować kolejny puzzel, odznacz kliknięciem aktywny kawałek układanki i wybierz inny.</p>
         </div>
     );
 }

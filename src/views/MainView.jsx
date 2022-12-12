@@ -5,6 +5,7 @@ import GameField from "../components/GameField.jsx";
 import { Toast } from 'primereact/toast';
 import { useRef } from 'react';
 
+
 function MainView() {
     const [name, setName] = useState(" ");
     const [pieces, setPieces] = useState(" ");
@@ -56,7 +57,7 @@ function MainView() {
 
     useEffect(() => {
         setTimerIsRunning(false);
-        
+
     }, [win]);
 
     return (
@@ -68,7 +69,7 @@ function MainView() {
                             getImg={updateStateImg}
                             image={img} getUrl={updateStateUrl}
                             url={url}
-                            updateSubmit={updateSubmit}/> : <GameField pieces={pieces} img={img} markedElement={markedElement} setWin={setWin} setTimerIsRunning={setTimerIsRunning}/>}
+                            updateSubmit={updateSubmit}/> : <GameField pieces={pieces} img={img} markedElement={markedElement} setWin={setWin} win={win} timer={timer}/>}
             <SideBar name={name}
                      numberOfPieces={pieces}
                      img={img}

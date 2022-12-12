@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
+import Win from "./Win.jsx";
 
-function GameField4({background, markedElement, setWin, setTimerIsRunning}) {
+function GameField4({background, markedElement, setWin, win, timer}) {
     const [bgd1, setBgd1] = useState(null);
     const [bgd2, setBgd2] = useState(null);
     const [bgd3, setBgd3] = useState(null);
@@ -11,7 +12,6 @@ function GameField4({background, markedElement, setWin, setTimerIsRunning}) {
         e.target.style.backgroundPosition=markedElement;
         e.target.style.backgroundRepeat="no-repeat";
         e.target.style.backgroundSize="200%";
-        // console.log(background);
         console.log(markedElement);
     }
 
@@ -24,41 +24,25 @@ function GameField4({background, markedElement, setWin, setTimerIsRunning}) {
         if (bgd1 === correctBgd1 && bgd2 === correctBgd2 && bgd3 === correctBgd3 && bgd4 === correctBgd4) {
             console.log("good");
             setWin(true);
-            // setTimerIsRunning(false);
         }
     }, [bgd1, bgd2, bgd3, bgd4]);
 
-
     return (
         <div  className="mainField">
-            <div className="board">
-                <div className="row row4">
-                    <div className="puzzle puzzle4-1" onClick={(e) => {chosenField(e); setBgd1(e.target.style.backgroundPosition)}}
-                         // style={{backgroundImage: background,
-                         //     backgroundPosition: "0 0"}}
-                    >1</div>
-                    <div className="puzzle puzzle4-2" onClick={(e) => {chosenField(e); setBgd2(e.target.style.backgroundPosition)}}
-                         // style={{backgroundImage: background,
-                         //     backgroundRepeat: "no-repeat",
-                         //     backgroundSize: "200%",
-                         //     backgroundPosition: "100% 0"}}
-                    >2</div>
+            {win ? <Win timer={timer}/> :  <div className="board">
+                <div className="row">
+                    <div className="puzzle" onClick={(e) => {chosenField(e); setBgd1(e.target.style.backgroundPosition)}}
+                    ></div>
+                    <div className="puzzle" onClick={(e) => {chosenField(e); setBgd2(e.target.style.backgroundPosition)}}
+                    ></div>
                 </div>
-                <div className="row row4">
-                    <div className="puzzle puzzle4-3" onClick={(e) => {chosenField(e); setBgd3(e.target.style.backgroundPosition)}}
-                         // style={{backgroundImage: background,
-                         //     backgroundRepeat: "no-repeat",
-                         //     backgroundSize: "200%",
-                         //     backgroundPosition: "0 100%"}}
-                    >3</div>
-                    <div className="puzzle puzzle4-4" onClick={(e) => {chosenField(e); setBgd4(e.target.style.backgroundPosition)}}
-                         // style={{backgroundImage: background,
-                         //     backgroundRepeat: "no-repeat",
-                         //     backgroundSize: "200%",
-                         //     backgroundPosition: "100% 100%"}}
-                    >4</div>
+                <div className="row">
+                    <div className="puzzle" onClick={(e) => {chosenField(e); setBgd3(e.target.style.backgroundPosition)}}
+                    ></div>
+                    <div className="puzzle" onClick={(e) => {chosenField(e); setBgd4(e.target.style.backgroundPosition)}}
+                    ></div>
                 </div>
-            </div>
+            </div>}
 
         </div>
     );
