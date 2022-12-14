@@ -4,6 +4,7 @@ import SideBar from "../components/sidebar/SideBar.jsx";
 import GameField from "../components/GameField.jsx";
 import { Toast } from 'primereact/toast';
 import { useRef } from 'react';
+import supabase from "../services/supabase.js";
 
 
 function MainView() {
@@ -57,7 +58,36 @@ function MainView() {
 
     useEffect(() => {
         setTimerIsRunning(false);
-
+        if (win) {
+            if (pieces === "4") {
+                const bestScore4 = async() => {
+                    const { data, error } = await supabase
+                        .from('bestScore4')
+                        .insert([
+                            { name: name, time: timer },
+                        ])
+                }
+                bestScore4();
+            } else if( pieces === "9") {
+                const bestScore9 = async() => {
+                    const { data, error } = await supabase
+                        .from('bestScore9')
+                        .insert([
+                            { name: name, time: timer },
+                        ])
+                }
+                bestScore9();
+            } else if ( pieces === "16") {
+                const bestScore16 = async() => {
+                    const { data, error } = await supabase
+                        .from('bestScore16')
+                        .insert([
+                            { name: name, time: timer },
+                        ])
+                }
+                bestScore16();
+            }
+        }
     }, [win]);
 
     return (
@@ -69,7 +99,7 @@ function MainView() {
                             getImg={updateStateImg}
                             image={img} getUrl={updateStateUrl}
                             url={url}
-                            updateSubmit={updateSubmit}/> : <GameField pieces={pieces} img={img} markedElement={markedElement} setWin={setWin} win={win} timer={timer}/>}
+                            updateSubmit={updateSubmit}/> : <GameField pieces={pieces} img={img} url={url} markedElement={markedElement} setWin={setWin} win={win} timer={timer}/>}
             <SideBar name={name}
                      numberOfPieces={pieces}
                      img={img}

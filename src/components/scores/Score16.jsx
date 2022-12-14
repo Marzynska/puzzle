@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Score() {
+function Score16() {
     return (
         <div className="biggerField">
-            <p>Global scores from database</p>
+            <p>Global scores from database - 16 puzzles</p>
         </div>
     );
 }
 
-export default Score;
+export default Score16;

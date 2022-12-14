@@ -1,4 +1,12 @@
 .textArea {
   @include bigFieldSettings;
   height: 80%;
+
+  h3 {
+    padding: 20px 10px;
+  }
+
+  p {
+    padding: 3px 0;
+  }
 }

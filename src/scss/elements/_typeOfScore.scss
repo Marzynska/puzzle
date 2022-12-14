@@ -1,3 +1,10 @@
 .smallerField {
   @include sidebarSettings;
+  @include flexCenter;
+  flex-direction: column;
+
+  .btn-bs {
+    margin: 1rem;
+    color: $fontColor;
+  }
 }
