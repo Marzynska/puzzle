@@ -32,9 +32,9 @@ function Score4() {
             {fetchError && <p>{fetchError}</p>}
             {scores &&
                 <ul>
-                    {scores.sort((a,b) => {return a-b})
-                        .filter((element, index) => {return index<15})
-                        .map(({id, name, time}, index) => <li key={id}>{`${index + 1}.`} {name} {time}</li>)
+                    {scores.sort((a,b) => a.time - b.time)
+                        .slice(0, 15)
+                        .map(({id, name, time}, index) => <li key={id}>{`${index + 1}.`} {name} {time} s</li>)
                     }
                 </ul>
             }

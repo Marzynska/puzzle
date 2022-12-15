@@ -1,3 +1,8 @@
 .biggerField {
   @include mainFieldSettings;
+
+  li {
+    line-height: 1.2em;
+  }
+
 }
