@@ -11,7 +11,7 @@ function Option9Pieces({background, parts9, isClicked}) {
                          backgroundSize,
                          backgroundPosition}}
                      onClick={e => isClicked(e)}
-                     className={className}>{text}</div>
+                     className={className} />
             )}
         </>
     );

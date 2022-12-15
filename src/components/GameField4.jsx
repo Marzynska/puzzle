@@ -8,11 +8,13 @@ function GameField4({background, markedElement, setWin, win, timer}) {
     const [bgd4, setBgd4] = useState(null);
 
     const chosenField = (e) => {
-        e.target.style.background=background;
-        e.target.style.backgroundPosition=markedElement;
-        e.target.style.backgroundRepeat="no-repeat";
-        e.target.style.backgroundSize="200%";
-        console.log(markedElement);
+        if (markedElement !== " ") {
+            e.target.style.background=background;
+            e.target.style.backgroundPosition=markedElement;
+            e.target.style.backgroundRepeat="no-repeat";
+            e.target.style.backgroundSize="200%";
+            console.log(markedElement);
+        }
     }
 
     const correctBgd1 = "0px 0px";

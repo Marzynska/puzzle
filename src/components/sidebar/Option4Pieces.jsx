@@ -11,7 +11,7 @@ function Option4Pieces({background, parts, isClicked}) {
                          backgroundSize,
                          backgroundPosition}}
                      onClick={e => isClicked(e)}
-                     className={className}></div>
+                     className={className} />
             )}
         </>
     );
