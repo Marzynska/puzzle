@@ -4,9 +4,9 @@ import GameField4 from "./GameField4.jsx";
 import GameField9 from "./GameField9.jsx";
 import GameField16 from "./GameField16.jsx";
 
-import img1Jpg from '../assets/img/img1.jpg';
-import img2Jpg from '../assets/img/img2.jpg';
-import img3Jpg from '../assets/img/img3.jpg';
+import img1Jpg from '../assets/img/img1.jpg?url';
+import img2Jpg from '../assets/img/img2.jpg?url';
+import img3Jpg from '../assets/img/img3.jpg?url';
 
 function GameField({pieces, img, url, markedElement, setWin, win, timer}) {
     let background;

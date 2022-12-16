@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button} from "primereact/button";
 import {NavLink} from "react-router-dom";
-import congrat from '../assets/img/congrat.png';
+import congrat from '../assets/img/congrat.png?url';
 
 function Win({timer}) {
     return (
