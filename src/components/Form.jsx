@@ -1,6 +1,10 @@
 import React from 'react';
 import { Button } from 'primereact/button';
 
+import img1sJpg from '../assets/img/img1s.jpg';
+import img2sJpg from '../assets/img/img2s.jpg';
+import img3sJpg from '../assets/img/img3s.jpg';
+
 function Form({getName, getNumberOfPieces, getImg, image, getUrl, url, updateSubmit}) {
 
 
@@ -58,9 +62,9 @@ function Form({getName, getNumberOfPieces, getImg, image, getUrl, url, updateSub
                 <br/>
                 <p className="radioDescription">Select the puzzle image:</p>
                 <fieldset className="radioForm" onChange={e => chooseImg(e)}>
-                    <label><input className="radio" type="radio" name="image" value="img1"/><img className="imgSmall" src="../src/assets/img/img1s.jpg" alt="Image 1"/></label>
-                    <label><input className="radio" type="radio" name="image" value="img2"/><img className="imgSmall" src="../src/assets/img/img2s.jpg" alt="Image 2"/></label>
-                    <label><input className="radio" type="radio" name="image" value="img3"/><img className="imgSmall" src="../src/assets/img/img3s.jpg" alt="Image 3"/></label>
+                    <label><input className="radio" type="radio" name="image" value="img1"/><img className="imgSmall" src={img1sJpg} alt="Image 1"/></label>
+                    <label><input className="radio" type="radio" name="image" value="img2"/><img className="imgSmall" src={img2sJpg} alt="Image 2"/></label>
+                    <label><input className="radio" type="radio" name="image" value="img3"/><img className="imgSmall" src={img3sJpg} alt="Image 3"/></label>
                     <label><input className="radio" type="radio" name="image" value="otherImg"/>other picture</label>
                 </fieldset>
                 <br/>

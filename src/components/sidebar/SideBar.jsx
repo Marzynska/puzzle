@@ -6,6 +6,9 @@ import GameInfo from "./GameInfo.jsx";
 import Option4Pieces from "./Option4Pieces.jsx";
 import Option9Pieces from "./Option9Pieces.jsx";
 import Option16Pieces from "./Option16Pieces.jsx";
+import img1Jpg from '../../assets/img/img1.jpg';
+import img2Jpg from '../../assets/img/img2.jpg';
+import img3Jpg from '../../assets/img/img3.jpg';
 
 function SideBar({name, numberOfPieces, img, url, timer, submit, markedElement, updateMarkedElement}) {
     const [parts, setParts] = useState(puzzle4);
@@ -20,11 +23,11 @@ function SideBar({name, numberOfPieces, img, url, timer, submit, markedElement, 
 
     let background;
     if (img === "img1") {
-        background = "url('../src/assets/img/img1.jpg')";
+        background = `url(${img1Jpg})`;
     } else if (img === "img2") {
-        background = "url('../src/assets/img/img2.jpg')";
+        background = `url(${img2Jpg})`;
     } else if (img === "img3") {
-        background = "url('../src/assets/img/img3.jpg')";
+        background = `url(${img3Jpg})`;
     } else {
         background = `url("${url}")`;
     }
